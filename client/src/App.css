@@ -1,0 +1,62 @@
+/* Landing page */
+.landingImg {
+  background: url('./img/landingimg.jpg');
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+
+/* Header */
+.headerLogo {
+  font-family: 'Marck Script', cursive;
+  font-size: 6rem;
+}
+.navbar-default .navbar-brand:hover {
+  color: #FFFFF0;
+  transition: ease-in 0.1s;
+}
+.navbar-default .navbar-brand {
+  color: white;
+}
+.navbar-default {
+  padding-top: 15px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 2.5rem;
+  border-color: black;
+}
+.navbar-default .navbar-nav>li>a:hover  {
+  color: #FFFFF0;
+  transition: ease-in 0.1s;
+}
+.navbar {
+  background-image: none;
+  background-color: rgba(0,0,0,0.8);
+}
+.navbar-default .navbar-nav>li>a {
+  color: white;
+}
+.userIcon {
+  font-size: 3rem;
+  padding: 10px;
+  border-radius: 25px;
+  color: white;
+}
+.userIcon:hover {
+  background-color: white;
+  color: black;
+  transition: ease-in 0.2s;
+}
+
+
+/* Footer */
+.footer {
+  text-align: center;
+  background-color: black;
+  color: white;
+  font-family: 'Open Sans Condensed', sans-serif;
+  padding-bottom: 10px;
+}
+.footer ul {
+  list-style: none;
+  font-size: 2rem;
+}
