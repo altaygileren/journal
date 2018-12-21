@@ -12,10 +12,10 @@ module.exports = function validateRegisterInput(data) {
 
   // First and last name length validator
   if (!Validator.isLength(data.firstname, { min: 2, max: 20 })) {
-    errors.name = 'First name must be between 2 and 20 characters';
+    errors.firstname = 'First name must be between 2 and 20 characters';
   }
   if (!Validator.isLength(data.lastname, { min: 2, max: 30 })) {
-    errors.name = 'Last name must be between 2 and 30 characters';
+    errors.lastname = 'Last name must be between 2 and 30 characters';
   }
   // First and last name empty field validator
   if (Validator.isEmpty(data.firstname)) {

@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Grid, Row, Col } from 'react-bootstrap';
+import axios from 'axios';
+import classnames from 'classnames';
 
 export default class Register extends Component {
   constructor() {
@@ -32,10 +34,16 @@ export default class Register extends Component {
       password: this.state.password,
       password2: this.state.password2
     }
-    console.log(newUser);
+    axios.post('/api/users/register', newUser)
+        .then(res => console.log(res.data))
+        .catch(err => this.setState({
+          errors: err.response.data
+        }));
   }
 
   render() {
+    const { errors } = this.state;
+
     return (
       <div className="containPages">
         <Grid>
@@ -45,7 +53,9 @@ export default class Register extends Component {
           <Row>
             <form onSubmit={this.onSubmit}>
               <input
-                className="userFormInput"
+                className={classnames('userFormInput', {
+                  'errorForm': errors.firstname
+                })}
                 type="text"
                 placeholder="First name"
                 name="firstname"
