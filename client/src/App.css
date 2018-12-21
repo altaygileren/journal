@@ -5,6 +5,55 @@
   height: 100vh;
   width: 100%;
 }
+.containPages {
+  text-align: center;
+  margin-top: 120px;
+  margin-bottom: 40px;
+}
+.blackBackground {
+  background-color: rgba(0,0,0,0.4);
+  height: 400px;
+  width: 80%;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  box-shadow: 1px 2px 20px black;
+}
+.userChoiceButtons {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.landingPageText {
+  color: white;
+  font-size: 5rem;
+  font-family: 'Marck Script', cursive;
+  padding-top: 10px;
+}
+.space {
+  margin-left: 10px;
+}
+.buttonStyle {
+  background-color: rgba(255,255,255,0.9);
+  color: black;
+  border: none;
+  height: 60px;
+  width: 150px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 3rem;
+  border-radius: 5px;
+}
+.buttonStyle:hover {
+  border-radius: 10px;
+  transition: ease-in 0.2s;
+  background-color: white;
+}
 
 /* Header */
 .headerLogo {
@@ -31,6 +80,7 @@
 .navbar {
   background-image: none;
   background-color: rgba(0,0,0,0.8);
+  box-shadow: 1px 2px 20px black;
 }
 .navbar-default .navbar-nav>li>a {
   color: white;
@@ -45,6 +95,35 @@
   background-color: white;
   color: black;
   transition: ease-in 0.2s;
+}
+
+
+/* Register / Login form */
+.userFormInputHeader {
+  font-family: 'Marck Script', cursive;
+  font-size: 6rem;
+}
+.userFormInput {
+  width: 50%;
+  margin-bottom: 20px;
+  height: 50px;
+  font-size: 2rem;
+  border-radius: 8px;
+  border: solid darkgrey 1px;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+.userFormInputBtn {
+  background-color: PowderBlue;
+  border-radius: 5px;
+  font-size: 3rem;
+  color: black;
+  font-family: 'Open Sans Condensed', sans-serif;
+  border: none;
+}
+.userFormInputBtn:hover {
+  transition: 0.1s ease-in;
+  background-color: green;
+  border-radius: 10px;
 }
 
 

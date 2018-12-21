@@ -14,12 +14,12 @@ export default class Header extends Component {
           </Navbar.Header>
           <Navbar.Collapse>
             <Nav>
-              <NavItem eventKey={1} href="/bio">
-                Bio
-      </NavItem>
+              <NavItem eventKey={1} href="/posts">
+                Posts
+              </NavItem>
             </Nav>
             <Nav pullRight>
-              <NavItem eventKey={1} href="/employees">
+              <NavItem eventKey={1} href="/user">
                 <Glyphicon className="userIcon" glyph="user" />
               </NavItem>
             </Nav>
