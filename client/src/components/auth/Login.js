@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
 import { Grid, Row, Col } from 'react-bootstrap';
+import classnames from 'classnames';
+import axios from 'axios';
 
 export default class Login extends Component {
   constructor() {
     super();
     this.state = {
       email: '',
-      password: ''
+      password: '',
+      errors: {}
     }
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
@@ -25,11 +28,18 @@ export default class Login extends Component {
       email: this.state.email,
       password: this.state.password
     }
-    console.log(loginUser);
+    axios.post('/api/users/login', loginUser)
+      .then(res => console.log(res.data))
+      .catch(err => this.setState({
+        errors: err.response.data
+      }));
   }
 
 
   render() {
+
+    const { errors } = this.state;
+
     return (
       <div className="containPages">
         <Grid>
@@ -39,22 +49,28 @@ export default class Login extends Component {
           <Row>
             <form onSubmit={this.onSubmit}>
               <input
-                className="userFormInput"
+                className={classnames('userFormInput', {
+                  'errorForm': errors.email
+                })}
                 type="text"
                 placeholder="Email"
                 name="email"
                 value={this.state.email}
                 onChange={this.onChange}
               />
+              {errors.email && (<div className="errorIssue">{errors.email}</div>)}
               <br />
               <input
-                className="userFormInput"
+                className={classnames('userFormInput', {
+                  'errorForm': errors.password
+                })}
                 type="password"
                 placeholder="Password"
                 name="password"
                 value={this.state.password}
                 onChange={this.onChange}
               />
+              {errors.password && (<div className="errorIssue">{errors.password}</div>)}
               <br />
               <button className="userFormInputBtn">Log in</button>
             </form>

@@ -35,10 +35,10 @@ export default class Register extends Component {
       password2: this.state.password2
     }
     axios.post('/api/users/register', newUser)
-        .then(res => console.log(res.data))
-        .catch(err => this.setState({
-          errors: err.response.data
-        }));
+      .then(res => console.log(res.data))
+      .catch(err => this.setState({
+        errors: err.response.data
+      }));
   }
 
   render() {
@@ -62,42 +62,55 @@ export default class Register extends Component {
                 value={this.state.firstname}
                 onChange={this.onChange}
               />
+              {errors.firstname && (<div className="errorIssue">{errors.firstname}</div>)}
               <br />
               <input
-                className="userFormInput"
+                className={classnames('userFormInput', {
+                  'errorForm': errors.lastname
+                })}
                 type="text"
                 placeholder="Last name"
                 name="lastname"
                 value={this.state.lastname}
                 onChange={this.onChange}
               />
+              {errors.lastname && (<div className="errorIssue">{errors.lastname}</div>)}
               <br />
               <input
-                className="userFormInput"
+                className={classnames('userFormInput', {
+                  'errorForm': errors.email
+                })}
                 type="text"
                 placeholder="Email"
                 name="email"
                 value={this.state.email}
                 onChange={this.onChange}
               />
+              {errors.email && (<div className="errorIssue">{errors.email}</div>)}
               <br />
               <input
-                className="userFormInput"
+                className={classnames('userFormInput', {
+                  'errorForm': errors.password
+                })}
                 type="password"
                 placeholder="Password"
                 name="password"
                 value={this.state.password}
                 onChange={this.onChange}
               />
+              {errors.password && (<div className="errorIssue">{errors.password}</div>)}
               <br />
               <input
-                className="userFormInput"
+                className={classnames('userFormInput', {
+                  'errorForm': errors.password2
+                })}
                 type="password"
                 placeholder="Password confirmation"
                 name="password2"
                 value={this.state.password2}
                 onChange={this.onChange}
               />
+              {errors.password2 && (<div className="errorIssue">{errors.password2}</div>)}
               <br />
               <button className="userFormInputBtn">Register</button>
             </form>

@@ -126,9 +126,15 @@
   border-radius: 10px;
 }
 .errorForm {
-  background-color: red;
+  background-color: Firebrick;
+  color: white;
 }
-
+.errorForm::placeholder {
+  color: white;
+}
+.errorIssue {
+  color: red;
+}
 
 /* Footer */
 .footer {
