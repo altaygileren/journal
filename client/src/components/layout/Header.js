@@ -3,12 +3,14 @@ import { Navbar, Nav, NavItem, Glyphicon } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { logoutUser } from '../../actions/authActions';
+import { clearCurrentDashboard } from '../../actions/dashboardActions';
 
 
 class Header extends Component {
 
   onLogoutClick(e) {
     e.preventDefault();
+    this.props.clearCurrentDashboard();
     this.props.logoutUser();
   }
   render() {
@@ -23,7 +25,7 @@ class Header extends Component {
           </NavItem>
         </Nav>
         <Nav pullRight>
-          <NavItem eventKey={1} href="/myposts">
+          <NavItem eventKey={1} href="/dashboard">
             <p className="test">Hey! {user.firstname}</p>
           </NavItem>
         </Nav>
@@ -78,4 +80,4 @@ const mapStateToProps = (state) => ({
 })
 
 
-export default connect(mapStateToProps, { logoutUser })(Header);
+export default connect(mapStateToProps, { logoutUser, clearCurrentDashboard })(Header);
