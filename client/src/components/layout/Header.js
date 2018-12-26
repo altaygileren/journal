@@ -18,13 +18,13 @@ class Header extends Component {
     const authLinks = (
       <div>
         <Nav pullRight>
-          <NavItem eventKey={1} href="/myposts">
-            <p className="test">{user.lastname}</p>
+          <NavItem onClick={this.onLogoutClick.bind(this)} eventKey={1} href="/login">
+            <button className="logoutBtn">Logout</button>
           </NavItem>
         </Nav>
         <Nav pullRight>
-          <NavItem onClick={this.onLogoutClick.bind(this)} eventKey={1} href="/login">
-            <button>Logout</button>
+          <NavItem eventKey={1} href="/myposts">
+            <p className="test">Hey! {user.firstname}</p>
           </NavItem>
         </Nav>
       </div>

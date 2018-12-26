@@ -1,9 +1,3 @@
-.test {
-  color: white;
-  font-size: 3rem;
-}
-
-
 /* Landing page */
 .landingImg {
   background: url('./img/landingimg.jpg');
@@ -101,6 +95,15 @@
   background-color: white;
   color: black;
   transition: ease-in 0.2s;
+}
+.logoutBtn {
+  background-color: Firebrick;
+  border: none;
+  height: 40px;
+}
+.logoutBtn:hover {
+  transition: ease-in 0.2s;
+  border-radius: 10px;
 }
 
 
