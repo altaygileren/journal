@@ -1,7 +1,8 @@
 import axios from 'axios';
 import {
   ADD_POST,
-  GET_ERRORS
+  GET_ERRORS,
+  GET_POSTS
 } from './types';
 
 
