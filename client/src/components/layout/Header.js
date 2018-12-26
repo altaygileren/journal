@@ -29,6 +29,11 @@ class Header extends Component {
             <p className="test">Hey! {user.firstname}</p>
           </NavItem>
         </Nav>
+        <Nav pullRight>
+          <NavItem eventKey={1} href="/writestory">
+            <p>Post a Blog</p>
+          </NavItem>
+        </Nav>
       </div>
     )
 

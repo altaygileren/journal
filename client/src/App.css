@@ -131,7 +131,7 @@
 }
 .userFormInputBtn:hover {
   transition: 0.1s ease-in;
-  background-color: green;
+  background-color: white;
   border-radius: 10px;
 }
 .errorForm {
@@ -143,6 +143,37 @@
 }
 .errorIssue {
   color: red;
+}
+
+/* Dashboard info */
+.dashboardInfo {
+  margin-top: 100px;
+}
+
+/* Post Feed */
+.postBox {
+  border: 5px solid black;
+  height: 100px;
+  margin-bottom: 20px;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+.headline {
+  padding-left: 10px;
+}
+
+/* Write blog */
+.writeBlogDiv {
+  margin-top: 100px;
+  text-align: center;
+}
+
+textarea.userFormInput {
+  width: 80%;
+  height: 500px;
+  resize: none;
+}
+input.userFormInput {
+  width: 80%;
 }
 
 /* Footer */

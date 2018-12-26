@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import Postform from './Postform';
 import { getPosts } from '../../actions/postActions';
 import PostFeed from './PostFeed';
 
@@ -24,8 +23,7 @@ class Posts extends Component {
     }
 
     return (
-      <div>
-        <Postform />
+      <div className="dashboardInfo">
         {postContent}
       </div>
     )

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { addPost } from '../../actions/postActions';
 import classnames from 'classnames';
+import { withRouter } from 'react-router-dom';
 
 class Postform extends Component {
   constructor(props) {
@@ -11,6 +12,7 @@ class Postform extends Component {
     this.state = {
       headline: '',
       body: '',
+      firstname: '',
       errors: {}
     }
 
@@ -40,8 +42,10 @@ class Postform extends Component {
     this.props.addPost(newPost);
     this.setState({
       headline: '',
-      body: ''
+      body: '',
+      firstname: ''
     })
+    this.props.history.push('/feed');
   }
 
   onChange(e) {
@@ -68,7 +72,7 @@ class Postform extends Component {
           />
           {errors.headline && (<div className="errorIssue">{errors.headline}</div>)}
           <br />
-          <input
+          <textarea
             className={classnames('userFormInput', {
               'errorForm': errors.body
             })}
@@ -98,4 +102,4 @@ const mapStateToProps = state => ({
   auth: state.auth
 })
 
-export default connect(mapStateToProps, { addPost })(Postform);
+export default connect(mapStateToProps, { addPost })(withRouter(Postform));

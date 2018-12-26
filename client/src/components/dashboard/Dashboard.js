@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getCurrentDashboard } from '../../actions/dashboardActions';
+import Dashboardpage from './Dashboardpage';
 
 class Dashboard extends Component {
 
@@ -19,11 +20,11 @@ class Dashboard extends Component {
     if (dashboard === null || loading) {
       dashboardContent = <h4>Loading</h4>
     } else {
-      dashboardContent = <h4>{user.firstname}'s Dashboard</h4>
+      dashboardContent = <Dashboardpage />
     }
 
     return (
-      <div className="dash">
+      <div className="dashboardInfo">
         {dashboardContent}
       </div>
     )
