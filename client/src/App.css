@@ -1,3 +1,9 @@
+.test {
+  color: white;
+  font-size: 3rem;
+}
+
+
 /* Landing page */
 .landingImg {
   background: url('./img/landingimg.jpg');
