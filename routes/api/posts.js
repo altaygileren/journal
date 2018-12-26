@@ -17,7 +17,7 @@ router.get('/test', (req, res) => res.json({ msg: 'Posts works' }));
 // @route GET api/posts/test
 // @desc Tests posts route
 // @access Public
-router.get('/all', (req, res) => {
+router.get('/', (req, res) => {
   Post.find()
     .populate('user', ['firstname', 'lastname', 'email'])
     .sort({ date: -1 })
