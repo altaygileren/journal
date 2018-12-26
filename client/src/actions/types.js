@@ -5,3 +5,8 @@ export const DASHBOARD_LOADING = 'DASHBOARD_LOADING';
 export const DASHBOARD_NOT_FOUND = 'DASHBOARD_NOT_FOUND';
 export const CLEAR_CURRENT_DASHBOARD = 'CLEAR_CURRENT_DASHBOARD';
 export const POST_LOADING = 'POST_LOADING';
+
+export const GET_POSTS = 'GET_POSTS';
+export const GET_POST = 'GET_POST';
+export const ADD_POST = 'ADD_POST';
+export const DELETE_POST = 'DELETE_POST';

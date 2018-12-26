@@ -19,7 +19,7 @@ class Dashboard extends Component {
     if (dashboard === null || loading) {
       dashboardContent = <h4>Loading</h4>
     } else {
-      dashboardContent = <h4>Hello World!</h4>
+      dashboardContent = <h4>{user.firstname}'s Dashboard</h4>
     }
 
     return (

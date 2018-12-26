@@ -13,6 +13,7 @@ import setAuthToken from './utils/setAuthToken';
 import { setCurrentUser, logoutUser } from './actions/authActions';
 import Dashboard from './components/dashboard/Dashboard';
 import { clearCurrentDashboard } from './actions/dashboardActions';
+import Posts from './components/posts/Posts';
 
 if (localStorage.jwtToken) {
   setAuthToken(localStorage.jwtToken);
@@ -40,6 +41,7 @@ class App extends Component {
               <Route exact path="/login" component={Login} />
               <Route exact path="/register" component={Register} />
               <Route exact path="/dashboard" component={Dashboard} />
+              <Route exact path="/feed" component={Posts} />
             </div>
             <Footer />
           </div>
