@@ -17,9 +17,9 @@ mongoose
   .catch(err => console.log(err));
 
 // Test route
-app.get('/', (req, res) => {
-  res.send('Hello world');
-});
+// app.get('/', (req, res) => {
+//   res.send('Hello world');
+// });
 
 // Passport
 app.use(passport.initialize());
