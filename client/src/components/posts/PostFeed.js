@@ -16,7 +16,6 @@ class PostFeed extends Component {
                 <Col lg={3}>
                   <div className="postBox">
                     <h2 className="headline">{post.headline}</h2>
-                    <p>By- {post.firstname}</p>
                   </div>
                 </Col>
               )
@@ -29,8 +28,7 @@ class PostFeed extends Component {
 }
 
 PostFeed.propTypes = {
-  posts: PropTypes.array.isRequired
+  posts: PropTypes.array.isRequired,
 }
-
 
 export default PostFeed;
